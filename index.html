@@ -1,56 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Simple Interest Calculator</title>
+  <title>Web App – Simple Interest Calculator</title>
   <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-  <div class="wrapper">
+  <div class="simple-interest">
     <h1>Simple Interest Calculator</h1>
-    <form class="calculator">
-      <div class="calculator_row">
-        <div>
-          <label for="bill">Amount</label>
-        </div>
-        <div id="amountInput">
-          <input type="text" id="amount" class="calculator_bill" value="0" required />
-        </div>
-      </div>
-      <div class="calculator_row">
-        <div> <label for="interestRate">Interest Rate</label></div>
-        <div id="interestAmount"><input type="text" class="form-control" id="interestSimple" placeholder="Example: 12%">
-        </div>
-      </div>
-      <div class="calculator_row">
-        <div>
-          <label for="NoOfYears">No. of Years <span class="years"></span></label>
-        </div>
-        <div id="yearSelect">
-          <select id="year" name="years">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="5">6</option>
-            <option value="5">7</option>
-            <option value="5">8</option>
-            <option value="5">9</option>
-            <option value="5">10</option>
-          </select>
-        </div>
-      </div>
-      <button onclick="simpleInterest()">Compute Interest</button>
-    </form>
-    <div class="output">
-      <p class="lead mt-3" id="output-01"></p>
-      <p class="lead mb-3" id="output-02"></p>
-      <p class="lead mb-3" id="output-03"></p>
-      <p class="lead mb-3" id="output-04"></p>
-    </div>
-    <p>&copy; Everyone Can Get Rich</p>
+  <table>
+    <tr><td>Amount:</td><td> <input id="amount" type="text"/></td></tr>
+    <tr><td>Interest Rate:</td><td> <input  type="range" min="0.5" max="30" value="0.5"  onchange="rateValue(this.value);"><span><output id="rateInput" >0.5</output>%</span></td></tr>
+    <tr><td>No. of Years</td><td> <select id="selectId" type="number">
+           <option value=1>1</option>
+           <option value=2>2</option>
+           <option value=3>3</option>
+           <option value=4>4</option>
+           <option value=5>5</option>
+           <option value=6>6</option>
+           <option value=7>7</option>
+           <option value=8>8</option>
+           <option value=9>9</option>
+           <option value=10>10</option>
+        </select></td></tr>
+        <tr>
+          <td><button onclick="calculate()">Compute Interest</button></td>
+        </tr>
+  </table>
+  <p id="resultat"></p>
+  <div>
+  <p>&copy; Everyone Can Get Rich<p>
   </div>
+  </div>
+  </body>
   <script src="script.js"></script>
 </body>
 

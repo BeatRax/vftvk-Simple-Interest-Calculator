@@ -1,28 +1,30 @@
-var principal = 0;
-var interestRate = 0;
-var timesCompounded = 0;
-var termOfLoan = 0;
-var amount = 0;
-var d = new Date();
-var n = d.getFullYear();
+function rateValue(val){
+	document.getElementById('rateInput').value=val;
+
+}
+function calculate(){
+
+amount = document.getElementById('amount').value;
+rateInput= document.getElementById('rateInput').value;
+selectId=document.getElementById('selectId').value;
+resultat=document.getElementById('resultat');
 
 
-function simpleInterest() {
-  event.preventDefault();
-  var principal = parseFloat(document.getElementById("amount").value);
-  var interestRate = parseFloat(document.getElementById("interestSimple").value);
-  interestRate = interestRate / 100;
-  var termOfLoan = parseFloat(document.getElementById("year").value);
-  var simpleInt = principal * interestRate * termOfLoan;
-  var amount = (principal + simpleInt).toFixed(2);
-  if (principal <= 0) {
-    alert("Enter a numnber")
-  } else {
-    document.getElementById("output-01").innerHTML = "If you deposit " + principal;
-    document.getElementById("output-02").innerHTML = "at an interest rate of " + (interestRate * 100).toPrecision(2) + "%";
-    document.getElementById("output-03").innerHTML = "You will recieve an amount of " + simpleInt.toFixed(2);
-    document.getElementById("output-04").innerHTML = "In the year " + (n + termOfLoan);
-  }
-  
+var today= new Date();
+var annee = today.getFullYear();
+var result1=((annee=+selectId));
+var today2=new Date();
+var annee2 =today2.getFullYear();
+var result2=result1+annee2
+
+if (amount <= 0) {
+  alert("number cannot be 0 or less")
+}else {
+  resultat.innerHTML="If you deposit"+"&nbsp;"+(amount)+","+"<br/>"+ "at an interest rate of"+"&nbsp;"+(rateInput)+"."+"<br/>"+
+"You will receive an amount of"+"&nbsp;"+(amount*rateInput*selectId/100)+","+"<br/>"+
+"in the year"+"&nbsp;"+(result2);
+}
+
+
 }
 

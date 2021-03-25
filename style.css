@@ -1,67 +1,28 @@
-body{
-    background-color: #000;
-}
+body {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #000000;
 
-h1 {
-    color: #808080;
 }
-.wrapper {
-    width: 400px;
-    margin: 50px auto 0;
-    padding: 60px 30px;
-    border: 1px solid white;
-    border-radius: 25px;
-    background-color: white;
+h2{
+	text-align: center;
 }
-
-.wrapper_title {
-    text-transform: capitalize;
-    margin: 0 0 40px;
-}
-
-.calculator_row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 0 10px;
-    width: 100%;
-}
-
-.calculator_row:last-child {
-    margin-bottom: 0;
-}
-
-.calculator_row label {
-    text-transform: capitalize;
-    font-weight: 700;
-}
-
-.calculator_bill {
-    width: 50%;
-}
-
-.calculator_tip {
-    width: 60%;
-}
-.slider{
-    margin-left: 120px;
-}
-#yearSelect{
-    width: 50%;
-}
-#interestAmount{
-    width: 50%;
-}
-#amountInput{
-    width: 50%;
-}
-
-.output p{
-    margin: 0;
-}
-
-
-.calculator__info {
-    text-transform: capitalize;
-    margin: 0;
+.simple-interest {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 25rem;
+	margin: 0;
+	padding: 2.5rem;
+	background-color: whitesmoke ;
+	border-radius: 0.3125rem;
+	box-shadow: 0 0 1.875rem rgba(black,0.3);
+	
+	
 }
