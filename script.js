@@ -15,7 +15,7 @@ function simpleInterest() {
   var termOfLoan = parseFloat(document.getElementById("year").value);
   var simpleInt = principal * interestRate * termOfLoan;
   var amount = (principal + simpleInt).toFixed(2);
-  if (principal == 0) {
+  if (principal <= 0) {
     alert("Enter a numnber")
   } else {
     document.getElementById("output-01").innerHTML = "If you deposit " + principal;
